@@ -10,7 +10,7 @@
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "oxfmt src/"
   },
   "dependencies": {
     "pinia": "^3.0.4",
@@ -27,8 +27,8 @@
     "eslint-plugin-vue": "~10.8.0",
     "globals": "^17.4.0",
     "npm-run-all2": "^8.0.4",
+    "oxfmt": "^0.42.0",
     "oxlint": "~1.57.0",
-    "prettier": "3.8.1",
     "vite": "^8.0.3",
     "vite-plugin-vue-devtools": "^8.1.1"
   },
