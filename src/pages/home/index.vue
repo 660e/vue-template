@@ -1,5 +1,5 @@
 <script setup>
-import { Camera } from '@lucide/vue'
+import { Camera } from '@lucide/vue';
 </script>
 
 <template>

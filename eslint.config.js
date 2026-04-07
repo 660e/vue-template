@@ -1,11 +1,11 @@
-import js from '@eslint/js'
-import skipFormatting from 'eslint-config-prettier/flat'
-import pluginOxlint from 'eslint-plugin-oxlint'
-import pluginVue from 'eslint-plugin-vue'
-import { defineConfig, globalIgnores } from 'eslint/config'
-import globals from 'globals'
+import js from '@eslint/js';
+import skipFormatting from 'eslint-config-prettier/flat';
+import pluginOxlint from 'eslint-plugin-oxlint';
+import pluginVue from 'eslint-plugin-vue';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import globals from 'globals';
 
-import eslintrcAutoImport from './.eslintrc-auto-import.js'
+import eslintrcAutoImport from './.eslintrc-auto-import.js';
 
 export default defineConfig([
   {
@@ -35,4 +35,4 @@ export default defineConfig([
       'vue/multi-word-component-names': 'off',
     },
   },
-])
+]);

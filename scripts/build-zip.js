@@ -1,10 +1,10 @@
-import fs from 'fs'
+import fs from 'fs';
 
-import archiver from 'archiver'
+import archiver from 'archiver';
 
-const output = fs.createWriteStream('dist.zip')
-const archive = archiver('zip', { zlib: { level: 9 } })
+const output = fs.createWriteStream('dist.zip');
+const archive = archiver('zip', { zlib: { level: 9 } });
 
-archive.pipe(output)
-archive.directory('dist/', false)
-archive.finalize()
+archive.pipe(output);
+archive.directory('dist/', false);
+archive.finalize();
