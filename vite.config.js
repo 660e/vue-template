@@ -3,12 +3,30 @@ import { fileURLToPath, URL } from 'node:url'
 import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [tailwindcss(), vue(), vueJsx(), vueDevTools()],
+  plugins: [
+    // https://github.com/unplugin/unplugin-auto-import
+    AutoImport({
+      eslintrc: {
+        enabled: true,
+        filepath: './.eslintrc-auto-import.js',
+        globalsPropValue: 'readonly',
+      },
+      imports: ['vue', 'vue-router'],
+    }),
+
+    // https://tailwindcss.com/docs/installation/using-vite
+    tailwindcss(),
+
+    vue(),
+    vueJsx(),
+    vueDevTools(),
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
