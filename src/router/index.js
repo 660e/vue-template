@@ -1,14 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
+const routes = import.meta.glob('./modules/*.js', { eager: true });
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: () => import('@/pages/home/index.vue'),
-    },
-  ],
+  routes: Object.values(routes).map((route) => route.default),
+  scrollBehavior: () => ({ top: 0, left: 0 }),
 });
 
 export default router;
