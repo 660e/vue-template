@@ -1,9 +1,17 @@
 <script setup>
+import { randomuser } from '@/api/example';
 import { is } from '@/utils';
+
+const env = import.meta.env;
+const data = ref({});
+
+onMounted(async () => {
+  data.value = await randomuser();
+});
 </script>
 
 <template>
-  <div>
+  <div class="space-y-4 p-4 font-mono">
     <div>
       <div>{{ is.array([1, 2, 3]) }} {{ is.array(undefined) }}</div>
       <div>{{ is.author('660e') }} {{ is.author(undefined) }}</div>
@@ -20,5 +28,7 @@ import { is } from '@/utils';
       <div>{{ is.symbol(Symbol()) }} {{ is.symbol(undefined) }}</div>
       <div>{{ is.undefined(undefined) }}</div>
     </div>
+    <pre>{{ env }}</pre>
+    <pre>{{ data.info }}</pre>
   </div>
 </template>
