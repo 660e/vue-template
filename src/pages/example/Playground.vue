@@ -1,4 +1,6 @@
 <script setup>
+import { Camera } from '@lucide/vue';
+
 import { randomuser } from '@/api/example';
 import { is } from '@/utils';
 
@@ -12,6 +14,11 @@ onMounted(async () => {
 
 <template>
   <div class="space-y-4 p-4 font-mono">
+    <div>
+      <Camera />
+    </div>
+    <ComponentExampleA />
+    <ComponentExampleB />
     <div>
       <div>{{ is.array([1, 2, 3]) }} {{ is.array(undefined) }}</div>
       <div>{{ is.author('660e') }} {{ is.author(undefined) }}</div>
