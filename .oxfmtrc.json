@@ -4,5 +4,6 @@
   "quoteProps": "consistent",
   "semi": false,
   "singleQuote": true,
+  "sortImports": {},
   "sortTailwindcss": {}
 }
