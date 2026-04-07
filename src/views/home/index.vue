@@ -4,6 +4,10 @@ import { Camera } from '@lucide/vue'
 
 <template>
   <div>
-    <Camera />
+    <div>
+      <Camera />
+    </div>
+    <ComponentExampleA />
+    <ComponentExampleB />
   </div>
 </template>
