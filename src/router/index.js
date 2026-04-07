@@ -4,7 +4,14 @@ const routes = import.meta.glob('./modules/*.js', { eager: true });
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: Object.values(routes).map((route) => route.default),
+  routes: [
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/login/index.vue'),
+    },
+    ...Object.values(routes).map((route) => route.default),
+  ],
   scrollBehavior: () => ({ top: 0, left: 0 }),
 });
 
