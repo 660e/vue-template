@@ -5,5 +5,9 @@ export default {
       path: 'playground',
       component: () => import('@/pages/example/Playground.vue'),
     },
+    {
+      path: 'websocket',
+      component: () => import('@/pages/example/WebSocket.vue'),
+    },
   ],
 };
