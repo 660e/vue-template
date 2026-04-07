@@ -1,4 +1,4 @@
 {
   "version": "0.2",
-  "words": ["oxfmt", "oxlint"]
+  "words": ["oxfmt", "oxlint", "oxlintrc"]
 }
