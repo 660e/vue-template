@@ -5,7 +5,7 @@ import pluginVue from 'eslint-plugin-vue'
 import { defineConfig, globalIgnores } from 'eslint/config'
 import globals from 'globals'
 
-import autoImportConfig from './.eslintrc-auto-import.js'
+import eslintrcAutoImport from './.eslintrc-auto-import.js'
 
 export default defineConfig([
   {
@@ -18,15 +18,14 @@ export default defineConfig([
   {
     languageOptions: {
       globals: {
-        ...autoImportConfig.globals,
+        ...eslintrcAutoImport.globals,
         ...globals.browser,
       },
     },
   },
 
   js.configs.recommended,
-  ...pluginVue.configs['flat/essential'],
-
+  ...pluginVue.configs['flat/recommended'],
   ...pluginOxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
 
   skipFormatting,
