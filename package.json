@@ -9,8 +9,8 @@
     "build:zip": "pnpm build && node scripts/build-zip.js",
     "preview": "vite preview",
     "lint": "run-s lint:*",
-    "lint:oxlint": "oxlint . --fix",
-    "lint:eslint": "eslint . --fix --cache",
+    "lint:oxlint": "oxlint .",
+    "lint:eslint": "eslint .",
     "format": "oxfmt src/"
   },
   "dependencies": {

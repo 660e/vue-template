@@ -1,15 +1,12 @@
 import axios from 'axios';
 
-class Request {
+export class Request {
   #instance;
   #setupInterceptors() {
     this.#instance.interceptors.request.use(
       (config) => {
         const { requestInterceptors } = config;
-        if (requestInterceptors) {
-          return requestInterceptors(config);
-        }
-        config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`;
+        if (requestInterceptors) return requestInterceptors(config);
         return config;
       },
       (error) => {
@@ -20,9 +17,7 @@ class Request {
     this.#instance.interceptors.response.use(
       (response) => {
         const { responseInterceptors } = response.config;
-        if (responseInterceptors) {
-          return responseInterceptors(response);
-        }
+        if (responseInterceptors) return responseInterceptors(response);
         return response.data;
       },
       (error) => {
@@ -67,5 +62,8 @@ class Request {
 }
 
 export const request = new Request({
+  headers: {
+    Authorization: `Bearer ${localStorage.getItem('token')}`,
+  },
   timeout: 10000,
 });
