@@ -1,3 +1,9 @@
+<script setup>
+import { Camera } from '@lucide/vue'
+</script>
+
 <template>
-  <div class="flex text-3xl font-bold underline" :class="'flex p-4 text-white'">home</div>
+  <div>
+    <Camera />
+  </div>
 </template>
