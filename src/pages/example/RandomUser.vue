@@ -1,3 +1,13 @@
+<script setup>
+import { randomuser } from '@/api/example';
+
+const data = ref({});
+
+onMounted(async () => {
+  data.value = await randomuser();
+});
+</script>
+
 <template>
-  <div></div>
+  <pre>{{ data }}</pre>
 </template>
