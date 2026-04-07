@@ -4,5 +4,5 @@
   "quoteProps": "consistent",
   "semi": false,
   "singleQuote": true,
-  "sortTailwindcss": true
+  "sortTailwindcss": {}
 }

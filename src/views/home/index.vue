@@ -1,3 +1,3 @@
 <template>
-  <div class="underline text-3xl flex font-bold" :class="['p-1', 'text-red-500']">home</div>
+  <div class="flex text-3xl font-bold underline" :class="'flex p-4 text-white'">home</div>
 </template>
