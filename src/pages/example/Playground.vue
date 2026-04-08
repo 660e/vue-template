@@ -2,7 +2,7 @@
 import { Camera } from '@lucide/vue';
 
 import { randomuser } from '@/api/example';
-import { is } from '@/utils';
+import { is } from '@/utils/is';
 
 const env = import.meta.env;
 const data = ref({});
