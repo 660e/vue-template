@@ -2,10 +2,18 @@
 import { Camera } from '@lucide/vue';
 
 import { randomuser } from '@/api/example';
+import { buildTree } from '@/utils/data';
 import { is } from '@/utils/is';
 
 const env = import.meta.env;
 const data = ref({});
+
+const flatData = [
+  { id: 1, name: 'A' },
+  { id: 2, name: 'B', parentId: 1 },
+  { id: 3, name: 'C', parentId: 2 },
+  { id: 4, name: 'D', parentId: 1 },
+];
 
 onMounted(async () => {
   data.value = await randomuser();
@@ -37,5 +45,9 @@ onMounted(async () => {
     </div>
     <pre>{{ env }}</pre>
     <pre>{{ data.info }}</pre>
+    <div class="flex">
+      <pre class="flex-1">{{ flatData }}</pre>
+      <pre class="flex-1">{{ buildTree(flatData) }}</pre>
+    </div>
   </div>
 </template>
