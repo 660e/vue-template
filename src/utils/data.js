@@ -1,8 +1,5 @@
-export function buildTree(
-  data,
-  options = { childrenKey: 'children', idKey: 'id', parentIdKey: 'parentId', rootId: null },
-) {
-  const { childrenKey, idKey, parentIdKey, rootId } = options;
+export function buildTree(data, options = {}) {
+  const { childrenKey = 'children', idKey = 'id', parentIdKey = 'parentId', rootId = null } = options;
 
   const map = {};
   const result = [];
