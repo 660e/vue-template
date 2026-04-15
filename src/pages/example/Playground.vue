@@ -2,7 +2,7 @@
 import { Camera } from '@lucide/vue';
 
 import { randomuser } from '@/api/example';
-import { buildTree } from '@/utils/data';
+import { buildTree, flattenTree } from '@/utils/data';
 import { is } from '@/utils/is';
 
 const env = import.meta.env;
@@ -14,6 +14,20 @@ const flatData = [
   { id: 3, name: 'C', parentId: 2 },
   { id: 4, name: 'D', parentId: 1 },
 ];
+
+const objectTree = {
+  id: 1,
+  name: 'A',
+  children: [
+    { id: 2, name: 'B', children: [{ id: 3, name: 'C' }] },
+    { id: 4, name: 'D' },
+  ],
+};
+
+const arrayTree = [structuredClone(objectTree)];
+
+const flattenedObjectTree = computed(() => flattenTree(objectTree));
+const flattenedArrayTree = computed(() => flattenTree(arrayTree));
 
 onMounted(async () => {
   data.value = await randomuser();
@@ -48,6 +62,14 @@ onMounted(async () => {
     <div class="flex">
       <pre class="flex-1">{{ flatData }}</pre>
       <pre class="flex-1">{{ buildTree(flatData) }}</pre>
+    </div>
+    <div class="flex">
+      <pre class="flex-1">{{ objectTree }}</pre>
+      <pre class="flex-1">{{ flattenedObjectTree }}</pre>
+    </div>
+    <div class="flex">
+      <pre class="flex-1">{{ arrayTree }}</pre>
+      <pre class="flex-1">{{ flattenedArrayTree }}</pre>
     </div>
   </div>
 </template>
