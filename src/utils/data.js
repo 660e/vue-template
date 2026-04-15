@@ -32,7 +32,7 @@ function flattenObjectTree(data, childrenKey) {
   while (source.length) {
     const node = source.shift();
     const { [childrenKey]: children = [], ...rest } = node;
-    source.unshift(...children);
+    source.unshift(...(children ?? []));
     result.push(rest);
   }
 
