@@ -2,8 +2,7 @@
 import { Camera } from '@lucide/vue';
 
 import { randomuser } from '@/api/example';
-import { buildTree, flattenTree } from '@/utils/data';
-import { is } from '@/utils/is';
+import { buildTree, flattenTree, is } from '@/utils';
 
 const env = import.meta.env;
 const data = ref({});
