@@ -6,8 +6,11 @@ export class Request {
     this.#instance.interceptors.request.use(
       (config) => {
         const { requestInterceptors } = config;
-        if (requestInterceptors) return requestInterceptors(config);
-        return config;
+        if (requestInterceptors) {
+          return requestInterceptors(config);
+        } else {
+          return config;
+        }
       },
       (error) => {
         return Promise.reject(error);
@@ -17,8 +20,11 @@ export class Request {
     this.#instance.interceptors.response.use(
       (response) => {
         const { responseInterceptors } = response.config;
-        if (responseInterceptors) return responseInterceptors(response);
-        return response.data;
+        if (responseInterceptors) {
+          return responseInterceptors(response);
+        } else {
+          return response.data;
+        }
       },
       (error) => {
         switch (error.response.status) {
@@ -34,6 +40,7 @@ export class Request {
           default:
             console.log(error.response.status);
         }
+
         return Promise.reject(error);
       },
     );

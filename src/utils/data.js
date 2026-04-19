@@ -46,9 +46,5 @@ function flattenArrayTree(data, childrenKey) {
 export function flattenTree(data, options = {}) {
   const { childrenKey = 'children' } = options;
 
-  if (is.array(data)) {
-    return flattenArrayTree(data, childrenKey);
-  }
-
-  return flattenObjectTree(data, childrenKey);
+  return is.array(data) ? flattenArrayTree(data, childrenKey) : flattenObjectTree(data, childrenKey);
 }
