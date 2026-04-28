@@ -3,15 +3,15 @@ export default {
   children: [
     {
       path: 'playground',
-      component: () => import('@/pages/example/Playground.vue'),
+      component: () => import('@/views/example/Playground.vue'),
     },
     {
       path: 'tailwind',
-      component: () => import('@/pages/example/Tailwind.vue'),
+      component: () => import('@/views/example/Tailwind.vue'),
     },
     {
       path: 'websocket',
-      component: () => import('@/pages/example/WebSocket.vue'),
+      component: () => import('@/views/example/WebSocket.vue'),
     },
   ],
 };

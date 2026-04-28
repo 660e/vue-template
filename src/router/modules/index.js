@@ -3,14 +3,14 @@ export default {
   redirect: { name: 'home' },
   children: [
     {
+      path: 'home',
+      name: 'home',
+      component: () => import('@/views/home.vue'),
+    },
+    {
       path: 'login',
       name: 'login',
       component: () => import('@/login/index.vue'),
-    },
-    {
-      path: 'home',
-      name: 'home',
-      component: () => import('@/pages/home.vue'),
     },
   ],
 };
