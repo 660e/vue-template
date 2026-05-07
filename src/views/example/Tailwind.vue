@@ -7,10 +7,10 @@ const toggleDarkMode = () => {
 </script>
 
 <template>
-  <div @click="toggleDarkMode" class="flex h-screen items-center justify-center bg-neutral-100 dark:bg-neutral-900">
-    <div class="h-40 w-80 rounded-lg bg-white p-4 shadow dark:bg-neutral-800">
+  <div @click="toggleDarkMode" class="bg-background flex h-screen items-center justify-center">
+    <div class="h-40 w-80 rounded-lg bg-white p-4 shadow">
       <div>
-        <div class="flex h-10 w-10 items-center justify-center rounded-md bg-blue-500">
+        <div class="bg-primary flex h-10 w-10 items-center justify-center rounded-md">
           <Pencil :size="20" class="text-white" />
         </div>
       </div>

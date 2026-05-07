@@ -1,0 +1,3 @@
+.theme-green {
+  --color-primary: var(--color-green-500);
+}

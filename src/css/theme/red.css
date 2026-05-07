@@ -1,0 +1,3 @@
+.theme-red {
+  --color-primary: var(--color-red-500);
+}
