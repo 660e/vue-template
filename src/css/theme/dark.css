@@ -1,0 +1,4 @@
+:root[data-mode='dark'] {
+  --color-background: var(--color-neutral-900);
+  --color-foreground: var(--color-neutral-100);
+}

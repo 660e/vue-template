@@ -1,0 +1,10 @@
+@import './theme/dark.css';
+@import './theme/green.css';
+@import './theme/red.css';
+
+@theme {
+  --color-background: var(--color-neutral-100);
+  --color-foreground: var(--color-neutral-900);
+
+  --color-primary: var(--color-blue-500);
+}
