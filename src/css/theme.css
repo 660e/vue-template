@@ -6,5 +6,7 @@
   --color-background: var(--color-neutral-100);
   --color-foreground: var(--color-neutral-900);
 
+  --color-card: var(--color-white);
+
   --color-primary: var(--color-blue-500);
 }
