@@ -1,5 +1,15 @@
 <script setup>
 import { Pencil } from '@lucide/vue';
+
+const root = document.documentElement;
+
+function setMode(mode) {
+  root.dataset.mode = mode;
+}
+
+function setTheme(theme) {
+  root.dataset.theme = theme;
+}
 </script>
 
 <template>
@@ -9,6 +19,14 @@ import { Pencil } from '@lucide/vue';
         <div class="bg-primary flex h-10 w-10 items-center justify-center rounded-md">
           <Pencil :size="20" class="text-background" />
         </div>
+      </div>
+      <div></div>
+      <div>
+        <div @click="setMode('light')">light</div>
+        <div @click="setMode('dark')">dark</div>
+        <div @click="setTheme('blue')">blue</div>
+        <div @click="setTheme('green')">green</div>
+        <div @click="setTheme('red')">red</div>
       </div>
     </div>
   </div>
