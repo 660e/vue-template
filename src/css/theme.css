@@ -3,8 +3,8 @@
 @import './theme/red.css';
 
 @theme {
-  --color-background: var(--color-neutral-100);
-  --color-foreground: var(--color-neutral-900);
+  --color-background: var(--color-zinc-100);
+  --color-foreground: var(--color-zinc-900);
 
   --color-card: var(--color-white);
 
