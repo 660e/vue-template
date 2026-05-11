@@ -30,9 +30,15 @@ const formData = reactive({
           type="password"
         />
       </div>
+      <div>
+        <span>Forgot password?</span>
+      </div>
       <button class="bg-primary hover:bg-primary-hover text-primary-foreground w-full cursor-pointer rounded-md py-2 duration-200" type="submit">
         Sign in
       </button>
+      <div>
+        <span>Create an account</span>
+      </div>
     </form>
   </div>
 </template>
