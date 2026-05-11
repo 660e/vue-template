@@ -1,22 +1,23 @@
 <script setup>
-import { Lock, Mail } from '@lucide/vue';
+import { User } from '@lucide/vue';
+
+const formData = reactive({
+  username: '',
+  password: '',
+});
 </script>
 
 <template>
-  <div class="flex h-screen items-center justify-center bg-zinc-100">
-    <div class="w-100 space-y-4 rounded-lg bg-white p-8 shadow">
+  <div class="bg-background flex h-screen items-center justify-center">
+    <div class="bg-card w-100 rounded-lg p-8 shadow">
       <div class="relative">
-        <Mail :size="20" class="absolute top-1/2 left-3 -translate-y-1/2 text-zinc-500" />
+        <User :size="20" class="text-muted-foreground absolute top-1/2 left-3 -translate-y-1/2" />
         <input
-          class="h-12 w-full rounded border border-zinc-200 pl-10 duration-200 outline-none focus:border-blue-500 focus:ring-3 focus:ring-blue-500/30"
+          v-model="formData.username"
+          autocomplete="username"
+          class="border-border focus:border-primary focus:ring-primary/30 h-10 w-full rounded-md border pr-3 pl-10 duration-200 outline-none focus:ring-3"
+          name="username"
           type="text"
-        />
-      </div>
-      <div class="relative">
-        <Lock :size="20" class="absolute top-1/2 left-3 -translate-y-1/2 text-zinc-500" />
-        <input
-          class="h-12 w-full rounded border border-zinc-200 pl-10 duration-200 outline-none focus:border-blue-500 focus:ring-3 focus:ring-blue-500/30"
-          type="password"
         />
       </div>
     </div>

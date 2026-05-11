@@ -13,11 +13,11 @@ function setTheme(theme) {
 </script>
 
 <template>
-  <div class="bg-background text-foreground flex h-screen items-center justify-center">
-    <div class="bg-card w-80 rounded-lg p-4 shadow">
+  <div class="bg-background flex h-screen items-center justify-center">
+    <div class="bg-card text-card-foreground w-80 rounded-lg p-4 shadow">
       <div>
         <div class="bg-primary flex h-10 w-10 items-center justify-center rounded-md">
-          <Pencil :size="20" class="text-white" />
+          <Pencil :size="20" class="text-primary-foreground" />
         </div>
       </div>
       <div class="pt-2 pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, iste.</div>
