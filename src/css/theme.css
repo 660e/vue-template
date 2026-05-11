@@ -11,6 +11,7 @@
 
   --color-primary: var(--color-blue-500);
   --color-primary-foreground: var(--color-white);
+  --color-primary-hover: var(--color-blue-600);
 
   --color-muted: var(--color-zinc-100);
   --color-muted-foreground: var(--color-zinc-500);
