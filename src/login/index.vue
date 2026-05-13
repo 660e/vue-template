@@ -1,13 +1,23 @@
 <script setup>
 import { User, Lock } from '@lucide/vue';
+import { z } from 'zod';
 
+const formSchema = z.object({
+  username: z.string().min(1, 'Username is required'),
+  password: z.string().min(1, 'Password is required'),
+});
 const formData = reactive({
   username: '',
   password: '',
 });
 
 function handleSubmit() {
-  console.log(formData);
+  const { error, success } = formSchema.safeParse(formData);
+
+  if (!success) {
+    console.log(error);
+    console.log(error.message);
+  }
 }
 </script>
 
