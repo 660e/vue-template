@@ -18,6 +18,7 @@ const formData = reactive({
           class="border-border focus:border-primary focus:ring-primary/30 h-10 w-full rounded-md border pr-3 pl-10 duration-200 outline-none focus:ring-3"
           name="username"
           type="text"
+          autofocus
         />
       </div>
       <div class="relative">
@@ -34,8 +35,8 @@ const formData = reactive({
         Sign in
       </button>
       <div class="flex justify-between">
-        <span class="text-primary cursor-pointer text-sm leading-none hover:underline">Forgot password?</span>
-        <span class="text-primary cursor-pointer text-sm leading-none hover:underline">Create an account</span>
+        <button class="text-primary cursor-pointer text-sm leading-none hover:underline">Forgot password?</button>
+        <button class="text-primary cursor-pointer text-sm leading-none hover:underline">Create an account</button>
       </div>
     </form>
   </div>
