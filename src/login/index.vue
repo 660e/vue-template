@@ -12,11 +12,15 @@ const formData = reactive({
 });
 
 function handleSubmit() {
-  const { error, success } = formSchema.safeParse(formData);
+  const result = formSchema.safeParse(formData);
 
-  if (!success) {
-    console.log(error);
-    console.log(error.message);
+  if (result.success) {
+    console.log(result.data);
+  } else {
+    console.log(result);
+    console.log(result.error.issues);
+    console.log(z.treeifyError(result.error));
+    console.log(result.error.message);
   }
 }
 </script>

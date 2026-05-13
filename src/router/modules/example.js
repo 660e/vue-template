@@ -13,5 +13,9 @@ export default {
       path: 'websocket',
       component: () => import('@/views/example/WebSocket.vue'),
     },
+    {
+      path: 'zod',
+      component: () => import('@/views/example/Zod.vue'),
+    },
   ],
 };
