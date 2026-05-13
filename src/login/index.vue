@@ -19,6 +19,7 @@ const formData = reactive({
           name="username"
           type="text"
           autofocus
+          required
         />
       </div>
       <div class="relative">
@@ -29,6 +30,7 @@ const formData = reactive({
           class="border-border focus:border-primary focus:ring-primary/30 h-10 w-full rounded-md border pr-3 pl-10 duration-200 outline-none focus:ring-3"
           name="password"
           type="password"
+          required
         />
       </div>
       <button class="bg-primary hover:bg-primary-hover text-primary-foreground w-full cursor-pointer rounded-md py-2 duration-200" type="submit">
