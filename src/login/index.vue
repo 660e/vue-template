@@ -53,8 +53,8 @@ function handleSubmit() {
         Sign in
       </button>
       <div class="flex justify-between">
-        <button class="text-primary cursor-pointer text-sm leading-none hover:underline">Forgot password?</button>
-        <button class="text-primary cursor-pointer text-sm leading-none hover:underline">Create an account</button>
+        <button class="text-primary cursor-pointer text-sm leading-none hover:underline" type="button">Forgot password?</button>
+        <button class="text-primary cursor-pointer text-sm leading-none hover:underline" type="button">Create an account</button>
       </div>
     </form>
   </div>
