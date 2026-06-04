@@ -3,19 +3,19 @@ export default {
   children: [
     {
       path: 'playground',
-      component: () => import('@/views/example/Playground.vue'),
+      component: () => import('@/pages/example/Playground.vue'),
     },
     {
       path: 'tailwind',
-      component: () => import('@/views/example/Tailwind.vue'),
+      component: () => import('@/pages/example/Tailwind.vue'),
     },
     {
       path: 'websocket',
-      component: () => import('@/views/example/WebSocket.vue'),
+      component: () => import('@/pages/example/WebSocket.vue'),
     },
     {
       path: 'zod',
-      component: () => import('@/views/example/Zod.vue'),
+      component: () => import('@/pages/example/Zod.vue'),
     },
   ],
 };
