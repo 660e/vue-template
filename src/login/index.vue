@@ -25,6 +25,7 @@ onMounted(() => {
 
 const submitting = ref(false);
 const errorMessage = ref('');
+const router = useRouter();
 function handleSubmit() {
   const result = formSchema.safeParse(formData);
   if (result.success) {
@@ -32,9 +33,7 @@ function handleSubmit() {
 
     submitting.value = true;
     errorMessage.value = '';
-    setTimeout(() => {
-      submitting.value = false;
-    }, 2000);
+    setTimeout(() => router.push({ name: 'home' }), 3000);
   } else {
     console.log(result);
     console.log(result.error.issues);
