@@ -1,0 +1,3 @@
+:root[data-theme='red'] {
+  --color-brand: var(--color-red-500);
+}

@@ -1,0 +1,7 @@
+:root[data-mode='dark'] {
+  --color-background: var(--color-zinc-950);
+  --color-foreground: var(--color-zinc-100);
+
+  --color-card: var(--color-zinc-900);
+  --color-card-foreground: var(--color-zinc-100);
+}

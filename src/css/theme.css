@@ -1,0 +1,53 @@
+@import './theme/dark.css';
+@import './theme/green.css';
+@import './theme/red.css';
+
+@theme {
+  --color-background: var(--color-zinc-50);
+  --color-foreground: var(--color-zinc-900);
+
+  --color-card: var(--color-white);
+  --color-card-foreground: var(--color-zinc-900);
+
+  --color-border: var(--color-zinc-200);
+
+  --color-muted: var(--color-zinc-100);
+  --color-muted-foreground: var(--color-zinc-500);
+  --color-muted-hover: var(--color-zinc-200);
+  --color-muted-subtle: var(--color-zinc-50);
+
+  --color-brand: var(--color-blue-500);
+  --color-brand-foreground: var(--color-white);
+  --color-brand-hover: var(--color-blue-600);
+  --color-brand-subtle: var(--color-blue-50);
+
+  --color-success: var(--color-green-500);
+  --color-success-foreground: var(--color-white);
+  --color-success-hover: var(--color-green-600);
+  --color-success-subtle: var(--color-green-50);
+
+  --color-warning: var(--color-yellow-500);
+  --color-warning-foreground: var(--color-white);
+  --color-warning-hover: var(--color-yellow-600);
+  --color-warning-subtle: var(--color-yellow-50);
+
+  --color-error: var(--color-red-500);
+  --color-error-foreground: var(--color-white);
+  --color-error-hover: var(--color-red-600);
+  --color-error-subtle: var(--color-red-50);
+
+  --color-primary: var(--color-brand);
+  --color-primary-foreground: var(--color-brand-foreground);
+  --color-primary-hover: var(--color-brand-hover);
+  --color-primary-subtle: var(--color-brand-subtle);
+
+  --color-secondary: var(--color-muted);
+  --color-secondary-foreground: var(--color-muted-foreground);
+  --color-secondary-hover: var(--color-muted-hover);
+  --color-secondary-subtle: var(--color-muted-subtle);
+
+  --color-destructive: var(--color-error);
+  --color-destructive-foreground: var(--color-error-foreground);
+  --color-destructive-hover: var(--color-error-hover);
+  --color-destructive-subtle: var(--color-error-subtle);
+}
